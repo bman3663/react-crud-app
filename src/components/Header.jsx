@@ -1,7 +1,37 @@
 import React from "react";
-
+import { Link, NavLink } from "react-router-dom";
 function Header() {
-  return <div>Header</div>;
+  return (
+    <>
+      <ul className="flex">
+        <li>
+          <NavLink to="/">
+            <h2>Home</h2>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/table">
+            <h2>Table</h2>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/form">
+            <h2>Form</h2>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">
+            <h2>About</h2>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/Help">
+            <h2>Help</h2>
+          </NavLink>
+        </li>
+      </ul>
+    </>
+  );
 }
 
 export default Header;
