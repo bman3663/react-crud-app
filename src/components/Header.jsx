@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 function Header() {
   return (
     <>
-      <ul className="flex">
+      <ul className="flex w-full justify-around ">
         <li>
           <NavLink to="/">
             <h2>Home</h2>
