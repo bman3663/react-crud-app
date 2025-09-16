@@ -5,6 +5,7 @@ import About from "./components/About";
 import Help from "./components/Help";
 import Form from "./components/Form";
 import Table from "./components/Table";
+import ErrorBoundary from "./components/ErrorBoundary";
 import { useState } from "react";
 import { useEffect } from "react";
 import { WorkoutProvider } from "./contexts/workoutContext";
@@ -48,7 +49,7 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<Layout />} errorElement={<ErrorBoundary />}>
         <Route path="" element={<Home />} />
         <Route path="table" element={<Table />} />
         <Route path="form" element={<Form />} />

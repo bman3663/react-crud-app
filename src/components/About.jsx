@@ -2,30 +2,21 @@ import React from "react";
 
 function About() {
   return (
-    <div>
-      <div>
-        <h2>About Our Training Application</h2>
-        <p>
-          Welcome to our Training Application. Our platform is designed to help
-          users create, manage, and track their training sessions efficiently.
-        </p>
+    <div className="max-w-2xl mx-auto p-6">
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">
+        About Workout Tracker
+      </h2>
+      <p className="text-gray-600 mb-6">
+        A simple application to track your workout sessions and progress.
+      </p>
 
-        <h3>Our Mission</h3>
-        <p>
-          Our mission is to provide a user-friendly platform that simplifies the
-          process of organizing and managing training sessions, allowing users
-          to focus on their personal and professional development.
-        </p>
-
-        <h3>Features</h3>
-        <div>
-          Create new training sessions with ease <br />
-          Modify existing training sessions <br />
-          Delete training sessions that are no longer needed <br />
-          Track the progress of your training sessions <br />
-          Create a summary report on training sessions for a user
-        </div>
-      </div>
+      <h3 className="text-xl font-semibold text-gray-700 mb-3">Features</h3>
+      <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
+        <li>Create new workout sessions</li>
+        <li>Edit existing workouts</li>
+        <li>Track your training progress</li>
+        <li>Your data stays saved in your browser</li>
+      </ul>
     </div>
   );
 }
