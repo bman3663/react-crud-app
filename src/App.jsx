@@ -18,7 +18,23 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const [workouts, setWorkouts] = useState([]);
+  const [workouts, setWorkouts] = useState([
+    {
+      id: 1,
+      name: "Niamh",
+      description: "Bike conditioning session",
+    },
+    {
+      id: 2,
+      name: "Jimmy",
+      description: "Hamstring rehab exercises",
+    },
+    {
+      id: 3,
+      name: "Albert",
+      description: "Upper Body calisthenics workout",
+    },
+  ]);
 
   const addWorkout = (workout) => {
     setWorkouts((prev) => [{ id: Date.now(), ...workout }, ...prev]);
