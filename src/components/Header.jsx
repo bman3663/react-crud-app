@@ -1,11 +1,17 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <header className="bg-gray-800 text-white shadow-md">
-      <nav className="container mx-auto px-4 py-3">
-        <ul className="flex justify-center space-x-8">
+      <nav className="container mx-auto px-4 py-3 flex items-center">
+        {/* App Title on the left */}
+        <div className="mr-8">
+          <h1 className="text-xl font-bold">Workout Tracker</h1>
+        </div>
+
+        {/* Navigation links */}
+        <ul className="flex justify-center space-x-6">
           <li>
             <NavLink
               to="/"
