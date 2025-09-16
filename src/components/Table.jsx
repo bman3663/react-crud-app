@@ -1,46 +1,29 @@
 import React from "react";
-
+import { useWorkout } from "../contexts/workoutContext";
+import WorkoutItem from "./WorkoutItem";
 function Table() {
+  const { workouts, updateWorkout, deleteWorkout } = useWorkout();
+
   return (
-    <div>
-      {/* <div class="wrapper">
-    <h1><%= title %></h1>
-    <br>
-
-    <div>
-     <% if (trainings.length === 0) { %>
-        <p>There are no training sessions for this user, please return to the <a href="/training/table">View Training Sessions</a> page and change your search.</p>
-    <% } else { %>
-
-    </div>
-
-    <table class="table table-inverse">
-        <thead>
-            <tr>
-                <th>User</th>
-                <th>User ID</th>
-                <th>Description</th>
-                <th>Date Created</th>
-                
-            </tr>
-        </thead>
-        <tbody>
-            <% for(var i = 0; i < trainings.length; i++) { %>
-            <tr>
-                <td><%= trainings[i].user %></td>
-                <td><%= trainings[i].id %></td>
-                <td><%= trainings[i].description %></td>
-                <td><%= new Date(trainings[i].createdAt).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) %></td>
-                <td>
-                   
-                  </td>
-            </tr>
-            <% } %>
-        </tbody>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {workouts.map((workout) => (
+          <WorkoutItem
+            key={workout.id}
+            workout={workout}
+            onEdit={updateWorkout}
+            onDelete={deleteWorkout}
+          />
+        ))}
+      </tbody>
     </table>
-    <% } %>
-</div> */}
-    </div>
   );
 }
 
