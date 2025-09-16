@@ -20,10 +20,13 @@ function App() {
   const [workouts, setWorkouts] = useState([]);
 
   const addWorkout = (workout) => {
+    console.log(`Adding this workout: ${workout.description}`);
     setWorkouts((prev) => [{ id: Date.now(), ...workout }, ...prev]);
+    console.log(`new workouts array: ${workouts.length}`);
   };
 
   const updateWorkout = (id, newDescription) => {
+    console.log(`WorkoutS b4: ${workouts}`);
     setWorkouts((prev) =>
       prev.map((prevWorkout) =>
         prevWorkout.id === id
@@ -31,6 +34,8 @@ function App() {
           : prevWorkout
       )
     );
+
+    console.log(`WorkoutS after: ${workouts}`);
   };
 
   const deleteWorkout = (id) => {
