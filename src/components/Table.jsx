@@ -8,6 +8,7 @@ function Table() {
   return (
     <div>
       <table>
+        <caption>Workout List</caption>
         <thead>
           <tr>
             <th>Name</th>

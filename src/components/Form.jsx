@@ -45,7 +45,6 @@ function Form() {
               onChange={(e) => {
                 setDescription(e.target.value);
               }}
-              maxLength="500"
             />
           </div>
 

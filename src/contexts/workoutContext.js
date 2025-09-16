@@ -1,14 +1,10 @@
 import { useContext, createContext } from "react";
 
 export const WorkoutContext  = createContext({ 
-     workouts: [{ 
-        id: 1, 
-        name: "Frank",
-        description: "Leg Day"
-     }],
-     addWorkout: (workout) => {}, 
-     updateWorkout: (id, Workout) => {},
-     deleteWorkout: (id) => {},
+     workouts: [],
+     addWorkout: () => {}, 
+     updateWorkout: () => {},
+     deleteWorkout: () => {},
 })
 
 export const useWorkout = () => { 

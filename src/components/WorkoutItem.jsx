@@ -1,15 +1,16 @@
 import React from "react";
 import { useWorkout } from "../contexts/workoutContext";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 function WorkoutItem({ workout }) {
   const [description, setDescription] = useState(workout.description);
   const [editable, setEditable] = useState(false);
   const { updateWorkout, deleteWorkout } = useWorkout();
 
-  const editWorkout = () => {
+  const editWorkout = useCallback(() => {
     updateWorkout(workout.id, { ...workout, description });
     setEditable(false);
-  };
+  }, [workout, description, updateWorkout]);
+
   return (
     <tr>
       <td>{workout.name}</td>
